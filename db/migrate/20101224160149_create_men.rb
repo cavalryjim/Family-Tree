@@ -6,7 +6,7 @@ class CreateMen < ActiveRecord::Migration
       t.date :birth_date
       t.date :dead_date
       t.text :about
-
+      t.integer :father_id
       t.timestamps
     end
   end

@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20101224160149) do
     t.date     "birth_date"
     t.date     "dead_date"
     t.text     "about"
+    t.integer  "father_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

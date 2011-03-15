@@ -25,6 +25,7 @@ class MenController < ApplicationController
   # GET /men/new.xml
   def new
     @man = Man.new
+    @mens = Man.all
 
     respond_to do |format|
       format.html # new.html.erb
