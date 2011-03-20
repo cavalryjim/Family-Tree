@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'foreigner'
 gem 'haml'
 gem 'foreigner'
+gem 'rspec'
 
 # Use unicorn as the web server
 # gem 'unicorn'

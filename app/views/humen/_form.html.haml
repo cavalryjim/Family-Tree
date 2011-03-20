@@ -1,0 +1,12 @@
+= form_for @human do |f|
+  - if @human.errors.any?
+    #error_explanation
+      = pluralize(@human.errors.count, "error")
+      prohibited this human from being saved:
+
+      %ul
+      - @human.errors.full_messages.each do |msg|
+        = msg
+
+  .actions
+    = f.submit

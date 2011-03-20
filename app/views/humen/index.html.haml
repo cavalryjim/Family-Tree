@@ -1,0 +1,16 @@
+%h1 Listing humen
+
+%tr
+  %th
+  %th
+  %th
+
+- @humen.each do |human|
+  %tr
+    %td = link_to 'Show', human
+    %td = link_to 'Edit', edit_human_path(human)
+    %td = link_to 'Destroy', human, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Human', new_human_path
