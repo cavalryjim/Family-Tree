@@ -8,6 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 gem 'foreigner'
 gem 'haml'
+gem 'foreigner'
 
 # Use unicorn as the web server
 # gem 'unicorn'

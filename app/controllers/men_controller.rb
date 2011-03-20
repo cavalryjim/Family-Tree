@@ -36,6 +36,7 @@ class MenController < ApplicationController
   # GET /men/1/edit
   def edit
     @man = Man.find(params[:id])
+    @mens = Man.all
   end
 
   # POST /men
