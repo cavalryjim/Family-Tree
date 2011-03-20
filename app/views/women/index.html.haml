@@ -1,0 +1,20 @@
+%h1 Listing Women
+- if @women.blank?
+  No body
+  %br
+-else
+  %table
+    %tr
+      %td First Name
+      %td Last Name
+      %th
+    - @women.each do |woman|
+      %tr
+        %td= woman.first_name
+        %td= woman.last_name
+        %td= link_to 'Show', woman
+        %td= link_to 'Edit', edit_woman_path(woman)
+        %td= link_to 'Destroy', woman, :confirm => 'Are you sure?', :method => :delete
+
+
+= link_to 'New Woman', new_woman_path

@@ -1,0 +1,25 @@
+= form_for @woman do |f|
+  - if @woman.errors.any?
+    %div{:id=>"error_explanation"}
+      %h2
+        = pluralize(@woman.errors.count, "error")
+        prohibited this man from being saved:
+      %ul
+      = @woman.errors.full_messages.each do |msg|
+        %li
+          = msg
+
+  %div.actions
+    = f.label "First name"
+    = f.text_field :first_name
+    %br
+    = f.label "Last name"
+    = f.text_field :last_name
+    %br
+    = f.label "Birth date"
+    = f.date_select :birth_date,:start_year => 1800, :end_year => Time.now.year
+    %br
+    = f.label "Father"
+    = f.select :father_id, @mens.collect{|m| [m.full_name,m.id]}
+    %br
+    = f.submit
