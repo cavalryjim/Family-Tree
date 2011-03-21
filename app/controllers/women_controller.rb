@@ -21,7 +21,8 @@ class WomenController < ApplicationController
   # GET /woman/new
   def new
     @woman = Woman.new
-    @mens = Woman.all
+    @mens = Man.all
+    @womens = Woman.all
 
     respond_to do |format|
       format.html
@@ -32,7 +33,8 @@ class WomenController < ApplicationController
   # GET /woman/1/edit
   def edit
     @woman = Woman.find(params[:id])
-    @mens = Woman.all
+    @mens = Man.all
+    @womens = Woman.all
   end
 
   # POST /women

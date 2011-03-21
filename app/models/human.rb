@@ -1,5 +1,6 @@
 class Human < ActiveRecord::Base
-  has_one :father, :class_name => "Human"
+  has_one :father, :class_name => "Man"
+  has_one :mother, :class_name => "Woman"
   validates :first_name, :presence => true
   validates :last_name, :presence => true
 

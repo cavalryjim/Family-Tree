@@ -26,6 +26,7 @@ class MenController < ApplicationController
   def new
     @man = Man.new
     @mens = Man.all
+    @womens = Woman.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +38,7 @@ class MenController < ApplicationController
   def edit
     @man = Man.find(params[:id])
     @mens = Man.all
+    @womens = Woman.all
   end
 
   # POST /men
