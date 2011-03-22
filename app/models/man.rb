@@ -1,7 +1,4 @@
 class Man < Human
-  before_save :default_values
+ before_save {self.sex=1}
 
-  def default_values
-    self.sex= 1
-  end
 end
